@@ -26,8 +26,10 @@ function getReachableArea(unit) {
         let neighbors = getHexNeighbors(current.q, current.r);
         for (let n of neighbors) {
             let key = `${n.q},${n.r}`; if (!hexMap[key]) continue;
-            let terrainType = hexMap[key]; let terrain = TERRAIN_DATA[terrainType];
-            let canWalk = terrain.isWalkable || (terrainType === 'Mountain' && uData.climb > 0) || (terrainType === 'River' && uData.river > 0);
+            let baseTerrainType = hexMap[key]; 
+            let actualTerrainType = getFactoryTerrainType(n.q, n.r);
+            let terrain = TERRAIN_DATA[actualTerrainType];
+            let canWalk = terrain.isWalkable || (baseTerrainType === 'Mountain' && uData.climb > 0) || (baseTerrainType === 'River' && uData.river > 0);
             if (!canWalk) continue;
             
             if (units.find(u => Math.round(u.q) === n.q && Math.round(u.r) === n.r && u.team !== unit.team)) continue;
@@ -72,7 +74,9 @@ function getGlobalPathCost(start, target) {
         let neighbors = getHexNeighbors(current.q, current.r);
         for (let n of neighbors) {
             let key = `${n.q},${n.r}`; if (!hexMap[key]) continue;
-            let terrain = TERRAIN_DATA[hexMap[key]];
+            let baseTerrainType = hexMap[key];
+            let actualTerrainType = getFactoryTerrainType(n.q, n.r);
+            let terrain = TERRAIN_DATA[actualTerrainType];
             if (!terrain.isWalkable && !(n.q === target.q && n.r === target.r)) continue;
 
             let terrainCost = terrain.cost >= 99 ? 6 : terrain.cost; let newCost = current.cost + terrainCost;
