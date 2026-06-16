@@ -2,15 +2,15 @@
 // 🛠️ 基礎設定與全新現代兵種圖鑑
 // ==========================================
 const UNIT_DATA = {
-    'LightTank': { name: '輕型裝甲坦克', hp: 100, ap: 50, def: 50, regen: 20, move: 6, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#0fb9b1', imgSrc: 'https://cdn-icons-png.flaticon.com/128/3305/3305315.png' },
-    'MediumTank': { name: '中型裝甲坦克', hp: 100, ap: 60, def: 60, regen: 15, move: 5, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#3867d6', imgSrc: 'https://cdn-icons-png.flaticon.com/128/1984/1984183.png' },
-    'HeavyTank': { name: '重型裝甲坦克', hp: 100, ap: 70, def: 70, regen: 10, move: 4, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#2bcbba', imgSrc: 'https://cdn-icons-png.flaticon.com/128/2223/2223150.png' },
-    'Fortress': { name: '強化裝甲堡壘', hp: 100, ap: 90, def: 90, regen: 5, move: 2, climb: 0, river: 0, antiAir: 40, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#f7b731', imgSrc: 'https://cdn-icons-png.flaticon.com/128/1048/1048265.png' },
-    'Infantry': { name: '步兵', hp: 100, ap: 20, def: 10, regen: 30, move: 3, climb: 1, river: 1, antiAir: 10, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#20bf6b', imgSrc: 'https://cdn-icons-png.flaticon.com/128/3011/3011281.png' },
-    'Bazooka': { name: '火箭筒兵', hp: 100, ap: 60, def: 10, regen: 20, move: 2, climb: 0, river: 0, antiAir: 30, moveThenAttack: 1, attackThenMove: 0, range: 2, heal: 0, color: '#eb3b5a', imgSrc: 'https://cdn-icons-png.flaticon.com/128/2056/2056073.png' },
-    'Medic': { name: '維修補給兵', hp: 100, ap: 0, def: 10, regen: 30, move: 4, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 2, heal: 40, color: '#a5b1c2', imgSrc: 'https://cdn-icons-png.flaticon.com/128/3063/3063206.png' },
-    'DirectArtillery': { name: '直擊快砲連', hp: 100, ap: 80, def: 30, regen: 30, move: 8, climb: 0, river: 0, antiAir: 20, moveThenAttack: 1, attackThenMove: 1, range: 1, heal: 0, color: '#fa8231', imgSrc: 'https://cdn-icons-png.flaticon.com/128/6509/6509988.png' },
-    'IndirectArtillery': { name: '隔空快砲連', hp: 100, ap: 50, def: 30, regen: 30, move: 6, climb: 0, river: 0, antiAir: 20, moveThenAttack: 1, attackThenMove: 1, range: 3, heal: 0, canCounter: false, color: '#8854d0', imgSrc: 'https://cdn-icons-png.flaticon.com/128/5021/5021644.png' }
+    'LightTank': { name: '輕型裝甲坦克', hp: 100, ap: 50, def: 50, regen: 20, move: 6, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#0fb9b1', imgSrc: 'img/lighttank.png' },
+    'MediumTank': { name: '中型裝甲坦克', hp: 100, ap: 60, def: 60, regen: 15, move: 5, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#3867d6', imgSrc: 'img/mediumtank.png' },
+    'HeavyTank': { name: '重型裝甲坦克', hp: 100, ap: 70, def: 70, regen: 10, move: 4, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#2bcbba', imgSrc: 'img/heavytank.png' },
+    'Fortress': { name: '強化裝甲堡壘', hp: 100, ap: 90, def: 90, regen: 5, move: 2, climb: 0, river: 0, antiAir: 40, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#f7b731', imgSrc: 'img/fortress.png' },
+    'Infantry': { name: '步兵', hp: 100, ap: 20, def: 10, regen: 30, move: 3, climb: 1, river: 1, antiAir: 10, moveThenAttack: 1, attackThenMove: 0, range: 1, heal: 0, color: '#20bf6b', imgSrc: 'img/infantry.png' },
+    'Bazooka': { name: '火箭筒兵', hp: 100, ap: 60, def: 10, regen: 20, move: 2, climb: 0, river: 0, antiAir: 30, moveThenAttack: 1, attackThenMove: 0, range: 2, heal: 0, color: '#eb3b5a', imgSrc: 'img/bazooka.png' },
+    'Medic': { name: '維修補給兵', hp: 100, ap: 0, def: 10, regen: 30, move: 4, climb: 0, river: 0, antiAir: 0, moveThenAttack: 1, attackThenMove: 0, range: 2, heal: 40, color: '#a5b1c2', imgSrc: 'img/medic.png' },
+    'DirectArtillery': { name: '直擊快砲連', hp: 100, ap: 80, def: 30, regen: 30, move: 8, climb: 0, river: 0, antiAir: 20, moveThenAttack: 1, attackThenMove: 1, range: 1, heal: 0, color: '#f8b195', imgSrc: 'img/directartillery.png' },
+    'IndirectArtillery': { name: '隔空快砲連', hp: 100, ap: 50, def: 30, regen: 30, move: 6, climb: 0, river: 0, antiAir: 20, moveThenAttack: 1, attackThenMove: 1, range: 3, heal: 0, canCounter: false, color: '#c44569', imgSrc: 'img/indirectartillery.png' },
 };
 
 const TERRAIN_DATA = {
@@ -22,9 +22,9 @@ const TERRAIN_DATA = {
     'Bridge':   { name: '橋樑', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#a5b1c2', imgSrc: 'img/bridge.jpg' },
     'Base_r':   { name: '基地紅', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#eb3b5a', imgSrc: 'img/base_r.jpg' },
     'Base_b':   { name: '基地藍', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#3498db', imgSrc: 'img/base_b.jpg' },
-    'Factory_g':{ name: '工廠灰', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#7f8fa6', imgSrc: 'img/factory_g.jpg' },
-    'Factory_r':{ name: '工廠紅', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#fc5c65', imgSrc: 'img/factory_r.jpg' },
-    'Factory_b':{ name: '工廠藍', defBonus: -0.1, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#45aaf2', imgSrc: 'img/factory_b.jpg' },
+    'Factory_g':{ name: '工廠灰', defBonus: 0.2, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#7f8fa6', imgSrc: 'img/factory_g.jpg' },
+    'Factory_r':{ name: '工廠紅', defBonus: 0.3, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#fc5c65', imgSrc: 'img/factory_r.jpg' },
+    'Factory_b':{ name: '工廠藍', defBonus: 0.3, atkMod: 0.0,  isWalkable: true,  cost: 1, color: '#45aaf2', imgSrc: 'img/factory_b.jpg' },
 };
 
 const terrainImages = {};
@@ -33,6 +33,9 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const msg = document.getElementById('msg');
 const btn = document.getElementById('endTurnBtn');
+
+// 🏭 工廠所有者追蹤系統
+let factoryOwners = {}; // 格式: "q,r": "player" | "enemy" | null
 
 // ⚔️ 計算公式
 function calculateDamage(attacker, defender, attackerTerrainType, defenderTerrainType) {
@@ -48,6 +51,52 @@ function calculateDamage(attacker, defender, attackerTerrainType, defenderTerrai
     let baseDamage = actualAp * terrainMultiplier * armorFactor;
     let randomFactor = 0.9 + (Math.random() * 0.2);
     return Math.max(1, Math.round(baseDamage * randomFactor));
+}
+
+// 🏭 獲取工廠的實際地形類型（考慮佔領狀態）
+function getFactoryTerrainType(q, r) {
+    let key = `${q},${r}`;
+    let baseType = hexMap[key];
+    let owner = factoryOwners[key];
+    
+    if (!baseType || !baseType.startsWith('Factory')) return baseType;
+    
+    if (owner === 'player') return 'Factory_b';
+    if (owner === 'enemy') return 'Factory_r';
+    return 'Factory_g';
+}
+
+// 🏭 佔領工廠邏輯
+function occupyFactory(q, r, team) {
+    let key = `${q},${r}`;
+    let baseType = hexMap[key];
+    
+    // 檢查是否為工廠
+    if (!baseType || !baseType.startsWith('Factory')) return false;
+    
+    let previousOwner = factoryOwners[key];
+    factoryOwners[key] = team;
+    
+    // 更新地形視覺
+    hexMap[key] = getFactoryTerrainType(q, r);
+    
+    return previousOwner !== team; // 如果所有者改變，返回 true
+}
+
+// 🏭 檢查單位是否可以佔領工廠
+function canOccupyFactory(unit, q, r) {
+    let key = `${q},${r}`;
+    let baseType = hexMap[key];
+    
+    // 只有步兵可以佔領工廠
+    if (unit.type !== 'Infantry') return false;
+    
+    // 檢查是否為工廠
+    if (!baseType || !baseType.startsWith('Factory')) return false;
+    
+    // 檢查所有者是否改變
+    let currentOwner = factoryOwners[key];
+    return currentOwner !== unit.team;
 }
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
@@ -124,7 +173,7 @@ async function animateShake(unit) {
 // 💾 存檔與初始化
 // ==========================================
 function saveGameState() {
-    const state = { units: units, currentTurn: currentTurn, lastMessage: msg.innerHTML, selectedUnitId: selectedUnit ? selectedUnit.id : null };
+    const state = { units: units, currentTurn: currentTurn, lastMessage: msg.innerHTML, selectedUnitId: selectedUnit ? selectedUnit.id : null, factoryOwners: factoryOwners };
     localStorage.setItem('chessGameState', JSON.stringify(state));
 }
 
@@ -147,16 +196,23 @@ function initGame() {
         for (let r = Math.max(-radius, -q - radius); r <= Math.min(radius, -q + radius); r++) { hexMap[`${q},${r}`] = 'Grass'; }
     }
     const specials = {
-        "0,-4": "River", "0,-3": "River", "0,-2": "River", "0,-1": "River", "-1,0": "River", "1,0": "River", "-1,-1": "River", "-1,-2": "River", "2,0": "River", "-1,1": "River", "-1,3": "River", "-1,4": "River", "1,4": "River",
+        "0,-4": "River", "0,-3": "River", "0,-2": "River", "0,-1": "River", "-1,0": "River", "1,0": "River", "-1,-1": "River", "-1,-2": "River", "2,0": "River", "-1,1": "River", "-1,3": "River", "-2,-1": "River", "2,-1": "River",
         "0,4": "Bridge","-1,5": "Bridge", 
         "0,0": "River", "0,1": "River","0,2": "River","0,3": "River","0,5": "River","0,6": "River",
         "2,2": "Hill", "3,1": "Hill", "-2,2": "Hill", 
         "1,1": "Mountain", "-2,-2":"Mountain",
         "-2,0": "Forest", "3,-2": "Forest",
         "-5,0": "Base_b","5,0": "Base_r",
-        "5,3": "Factory_g","4,3": "Factory_r","-3,3": "Factory_b",
+        "5,3": "Factory_g","4,3": "Factory_g","-3,3": "Factory_g",
     };
     for (const [key, val] of Object.entries(specials)) { if(hexMap[key]) hexMap[key] = val; }
+    
+    // 初始化工廠所有者
+    factoryOwners = {
+        "5,3": null,
+        "4,3": null,
+        "-3,3": null,
+    };
     
     const savedState = localStorage.getItem('chessGameState');
     if (savedState) {
@@ -164,6 +220,7 @@ function initGame() {
         units = state.units; currentTurn = state.currentTurn;
         selectedUnit = state.selectedUnitId ? (units.find(u => u.id === state.selectedUnitId) || null) : null;
         if (state.lastMessage) msg.innerHTML = state.lastMessage;
+        if (state.factoryOwners) factoryOwners = state.factoryOwners;
         if (currentTurn !== 'player') { btn.disabled = true; btn.style.backgroundColor = '#7f8fa6'; setTimeout(executeEnemyTurn, 800); }
     } else {
         units = [];
@@ -186,7 +243,7 @@ function initGame() {
         units.push({ id: 16, q: 4, r: -4, team: 'enemy', type: 'Medic', hp: UNIT_DATA['Medic'].hp, currentMove: UNIT_DATA['Medic'].move, hasMoved: false, hasActed: false, hasAttacked: false });
         units.push({ id: 17, q: 5, r: -4, team: 'enemy', type: 'DirectArtillery', hp: UNIT_DATA['DirectArtillery'].hp, currentMove: UNIT_DATA['DirectArtillery'].move, hasMoved: false, hasActed: false, hasAttacked: false });
         units.push({ id: 18, q: 2, r: -4, team: 'enemy', type: 'IndirectArtillery', hp: UNIT_DATA['IndirectArtillery'].hp, currentMove: UNIT_DATA['IndirectArtillery'].move, hasMoved: false, hasActed: false, hasAttacked: false });
-        msg.innerHTML = '🟢 <b>大軍已就緒！</b>點擊藍色單位進行調度與攻擊。'; saveGameState(); 
+        msg.innerHTML = '🟢 <b>大軍已就緒！</b>點擊藍色單位進行調度與攻擊。點擊步兵進攻灰色工廠可以佔領！'; saveGameState(); 
     }
     draw();
 }
@@ -214,7 +271,10 @@ function draw() {
     }
     
     for (const [key, terrainType] of Object.entries(hexMap)) {
-        let [q, r] = key.split(',').map(Number); let img = terrainImages[terrainType]; const pos = hexToPixel(q, r);
+        let [q, r] = key.split(',').map(Number); 
+        let actualTerrainType = getFactoryTerrainType(q, r);
+        let img = terrainImages[actualTerrainType]; 
+        const pos = hexToPixel(q, r);
         ctx.save(); ctx.beginPath();
         for (let i = 0; i < 6; i++) {
             const px = pos.x + HEX_SIZE * Math.cos(Math.PI/180 * (60*i - 30)); const py = pos.y + HEX_SIZE * Math.sin(Math.PI/180 * (60*i - 30));
@@ -222,7 +282,7 @@ function draw() {
         }
         ctx.closePath(); ctx.clip();
         if (img && img.complete && img.naturalWidth > 0) ctx.drawImage(img, pos.x - HEX_SIZE, pos.y - HEX_SIZE, HEX_SIZE * 2, HEX_SIZE * 2);
-        else { ctx.fillStyle = TERRAIN_DATA[terrainType].color; ctx.fill(); }
+        else { ctx.fillStyle = TERRAIN_DATA[actualTerrainType].color; ctx.fill(); }
         ctx.restore(); ctx.beginPath();
         for (let i = 0; i < 6; i++) {
             const px = pos.x + HEX_SIZE * Math.cos(Math.PI/180 * (60*i - 30)); const py = pos.y + HEX_SIZE * Math.sin(Math.PI/180 * (60*i - 30));
@@ -344,7 +404,8 @@ canvas.addEventListener('click', async (e) => {
     const hex = pixelToHex((e.clientX - rect.left)*(canvas.width / rect.width), (e.clientY - rect.top)*(canvas.height / rect.height));
     let key = `${hex.q},${hex.r}`; if(!hexMap[key]) return;
     let clickedUnit = units.find(u => Math.round(u.q) === hex.q && Math.round(u.r) === hex.r);
-    let tData = TERRAIN_DATA[hexMap[key]];
+    let actualTerrainType = getFactoryTerrainType(hex.q, hex.r);
+    let tData = TERRAIN_DATA[actualTerrainType];
     let defText = tData.defBonus > 0 ? `+${tData.defBonus * 100}%` : `${tData.defBonus * 100}%`;
     let atkText = tData.atkMod > 0 ? `+${tData.atkMod * 100}%` : `${tData.atkMod * 100}%`;
     let moveCostText = tData.isWalkable ? `消耗 ${tData.cost}` : `裝備無法通行`;
@@ -357,7 +418,8 @@ canvas.addEventListener('click', async (e) => {
         // ⚔️ 攻擊判定
         if (clickedUnit && clickedUnit.team === 'enemy' && dist <= uData.range && !selectedUnit.hasAttacked) {
             if (uData.ap <= 0) { msg.innerHTML = terrainInfo + `⚠️ ${uData.name} 無武裝，無法主動攻擊！`; return; }
-            let attackerTerrain = hexMap[`${Math.round(selectedUnit.q)},${Math.round(selectedUnit.r)}`]; let defenderTerrain = hexMap[key];
+            let attackerTerrain = getFactoryTerrainType(Math.round(selectedUnit.q), Math.round(selectedUnit.r)); 
+            let defenderTerrain = actualTerrainType;
             let damage = calculateDamage(selectedUnit, clickedUnit, attackerTerrain, defenderTerrain);
             clickedUnit.hp -= damage; selectedUnit.hasAttacked = true; 
             let combatMsg = terrainInfo + `⚔️ ${uData.name} 開火！造成 <b>${damage}</b> 傷害。`;
@@ -393,7 +455,7 @@ canvas.addEventListener('click', async (e) => {
                 msg.innerHTML = combatMsg; saveGameState(); 
             } else {
                 if (!clickedUnit.hasActed) {
-                    if (selectedUnit.hasMoved && !selectedUnit.hasAttacked) { selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; } 
+                    if (selectedUnit.hasMoved && !selectedUnit.hasAttacked) { selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; }
                     else if (selectedUnit.hasAttacked && uData.attackThenMove === 1 && selectedUnit.currentMove > 0) { selectedUnit.hasActed = true; }
                     selectedUnit = clickedUnit; if (!clickedUnit.hasMoved) { selectedUnit.originQ = clickedUnit.q; selectedUnit.originR = clickedUnit.r; selectedUnit.originMove = clickedUnit.currentMove; }
                     msg.innerHTML = terrainInfo + `🎯 選取 ${UNIT_DATA[clickedUnit.type].name}，(移動力: ${clickedUnit.currentMove})`; saveGameState(); 
@@ -402,7 +464,7 @@ canvas.addEventListener('click', async (e) => {
         }
         // 🔄 點選其他友軍
         else if (clickedUnit && clickedUnit.team === 'player' && clickedUnit !== selectedUnit && !clickedUnit.hasActed) {
-            if (selectedUnit.hasMoved && !selectedUnit.hasAttacked) { selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; } 
+            if (selectedUnit.hasMoved && !selectedUnit.hasAttacked) { selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; }
             else if (selectedUnit.hasAttacked && uData.attackThenMove === 1 && selectedUnit.currentMove > 0) { selectedUnit.hasActed = true; }
             selectedUnit = clickedUnit; if (!clickedUnit.hasMoved) { selectedUnit.originQ = clickedUnit.q; selectedUnit.originR = clickedUnit.r; selectedUnit.originMove = clickedUnit.currentMove; }
             msg.innerHTML = terrainInfo + `🎯 選取 ${UNIT_DATA[clickedUnit.type].name}，(移動力: ${clickedUnit.currentMove})`; saveGameState(); 
@@ -414,10 +476,20 @@ canvas.addEventListener('click', async (e) => {
                 let pathData = reachable[key]; let actualCost = pathData.cost; let fullPath = reconstructPath(reachable, hex);
                 await animateUnitMovement(selectedUnit, fullPath);
                 selectedUnit.hasMoved = true; selectedUnit.currentMove -= actualCost; 
+                
+                // 🏭 檢查是否佔領工廠
+                let occupiedMsg = '';
+                if (canOccupyFactory(selectedUnit, hex.q, hex.r)) {
+                    if (occupyFactory(hex.q, hex.r, selectedUnit.team)) {
+                        let ownerName = selectedUnit.team === 'player' ? '藍軍' : '紅軍';
+                        occupiedMsg = `<br>🏭 <b style='color:#ffeb3b;'>！！！ 步兵成功佔領工廠！工廠現由 ${ownerName} 控制！</b>`;
+                    }
+                }
+                
                 let hasEnemyInRange = units.some(u => u.team === 'enemy' && hexDistance(hex, u) <= uData.range);
                 let actionPrompt = (hasEnemyInRange && !selectedUnit.hasAttacked && uData.ap > 0) ? "<b>點擊敵軍開火</b>、或" : "請";
                 let zocText = pathData.hasZoc ? "<br><b style='color:#f1c40f;'>⚠️ 遭遇敵軍牽制！</b>" : "";
-                msg.innerHTML = terrainInfo + `🏃 移動消耗 ${actualCost}。${zocText}<br>${actionPrompt}<b>「點擊自己」待命結束</b>。`;
+                msg.innerHTML = terrainInfo + `🏃 移動消耗 ${actualCost}。${zocText}${occupiedMsg}<br>${actionPrompt}<b>「點擊自己」待命結束</b>。`;
                 if (selectedUnit.currentMove <= 0 && selectedUnit.hasAttacked) { selectedUnit.hasActed = true; selectedUnit = null; }
                 saveGameState(); 
             } else {
@@ -431,7 +503,7 @@ canvas.addEventListener('click', async (e) => {
         // 🔙 取消或撤銷移動
         else {
             if (selectedUnit.hasMoved && !selectedUnit.hasAttacked) {
-                selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; msg.innerHTML = terrainInfo + `🔙 取消移動。`;
+                selectedUnit.q = selectedUnit.originQ; selectedUnit.r = selectedUnit.originR; selectedUnit.currentMove = selectedUnit.originMove; selectedUnit.hasMoved = false; msg.innerHTML = terrainInfo + `🔙 撤銷移動。`;
             } else if (selectedUnit.hasAttacked) { selectedUnit.hasActed = true; selectedUnit = null; msg.innerHTML = terrainInfo + `🛡️ 行動結束。`; } 
             else { selectedUnit = null; msg.innerHTML = terrainInfo + `🔄 取消選取。`; }
             saveGameState(); 
