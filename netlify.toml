@@ -1,0 +1,18 @@
+# Netlify Configuration
+# This configuration ensures Netlify deploys the same content as GitHub Pages
+
+[build]
+  # No build command needed for static site
+  command = ""
+  # Publish directory (root of the site)
+  publish = "."
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = ""
+  publish = "."
